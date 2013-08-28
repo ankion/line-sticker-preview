@@ -1,0 +1,17 @@
+{
+	"manifest_version": 2,
+
+	"name": "Line Sticker Preview",
+	"version": "0.2",
+	"description": "Line Sticker Preview",
+	"options_page": "options.html",
+	"background": {
+		"scripts":["background.js"]
+	},
+	"content_scripts": [{
+		"matches": ["http://ste.nstae.com/Stk/*/"],
+		"js": ["jquery.min.js", "content.js"],
+		"run_at": "document_start",
+		"all_frames": true
+		}]
+}
